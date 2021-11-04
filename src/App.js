@@ -11,10 +11,12 @@ import StateDemo from './State/StateDemo';
 import Style from './StyleDemo/Style';
 import Example from './State/Example';
 import Example2 from './State/Example2';
+import RenderWithMap from './RenderWithMap/RenderWithMap';
+import DemoProps from './Props/DemoProps/DemoProps';
 
 function App() {
   return (
-    <div className="container">
+    <div>
         {/* <Nav />
         <Card />
         <Profile /> */}
@@ -25,8 +27,9 @@ function App() {
         {/* <StateDemo /> */}
         {/* <Style /> */}
         {/* <p className='color-red'>App component</p> */}
-        <Example />
-
+        {/* <Example /> */}
+        {/* <RenderWithMap /> */}
+        <DemoProps />
      
     </div>
   );
