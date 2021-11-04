@@ -10,6 +10,7 @@ import HandleEvent from './handleEvent/HandleEvent';
 import StateDemo from './State/StateDemo';
 import Style from './StyleDemo/Style';
 import Example from './State/Example';
+import Example2 from './State/Example2';
 
 function App() {
   return (

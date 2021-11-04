@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Example2 from './Example2'
 
 export default class Example extends Component {
     //Các bước khi giải quyết bài toán react :
@@ -28,6 +29,8 @@ export default class Example extends Component {
                 <button className="btn btn-outline-success" onClick={()=>{
                     this.handleFontSize(-1);
                 }}>-</button>
+                <h3>Ví dụ 2: Bài tập chọn xe</h3>
+                <Example2 />
             </div>
         )
     }
