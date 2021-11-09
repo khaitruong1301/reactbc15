@@ -13,6 +13,7 @@ import Example from './State/Example';
 import Example2 from './State/Example2';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProps from './Props/DemoProps/DemoProps';
+import DanhSachPham from './Props/DanhSachSanPham/DanhSachPham';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         {/* <p className='color-red'>App component</p> */}
         {/* <Example /> */}
         {/* <RenderWithMap /> */}
-        <DemoProps />
+        {/* <DemoProps /> */}
+        <DanhSachPham />
      
     </div>
   );
