@@ -10,7 +10,7 @@ export default class GioHang extends Component {
 
     render() {
 
-        let { gioHang } = this.props;
+        let { gioHang,xoaGioHang,tangGiamSoLuong } = this.props;
 
         return (
             <table className="table">
@@ -32,10 +32,21 @@ export default class GioHang extends Component {
                             <td><img src={spGH.hinhAnh} width={50} alt="..." /></td>
                             <td>{spGH.tenSP}</td>
                             <td>{spGH.giaBan}</td>
-                            <td>{spGH.soLuong}</td>
+                            <td>
+                                <button className="btn btn-primary mr-2" onClick={()=>{
+                                    tangGiamSoLuong(spGH.maSP,1)
+                                }}>+</button>
+                                {spGH.soLuong}
+                                <button className="btn btn-primary ml-2" onClick={()=>{
+                                    tangGiamSoLuong(spGH.maSP,-1)
+                                }}>-</button>
+                                
+                            </td>
                             <td>{spGH.soLuong * spGH.giaBan}</td>
                             <td>
-                                <button className="btn btn-danger">Xoá</button>
+                                <button className="btn btn-danger" onClick={()=>{
+                                    xoaGioHang(spGH.maSP)
+                                }}>Xoá</button>
                             </td>
                         </tr>
                     })}

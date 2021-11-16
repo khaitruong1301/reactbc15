@@ -14,6 +14,8 @@ import Example2 from './State/Example2';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProps from './Props/DemoProps/DemoProps';
 import DanhSachPham from './Props/DanhSachSanPham/DanhSachPham';
+import BaiTapGioHangRedux from './DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
+import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
         {/* <Example /> */}
         {/* <RenderWithMap /> */}
         {/* <DemoProps /> */}
-        <DanhSachPham />
+        {/* <DanhSachPham /> */}
+        {/* <BaiTapGioHangRedux /> */}
+        <BaiTapGameXucXac />
      
     </div>
   );

@@ -10,8 +10,8 @@ export default class SanPham extends Component {
 
         let sanPham = this.props.sanPham;
         let xemChiTiet = this.props.hamXemChiTiet;
-        // let {hamXemChiTiet,sanPham} = this.props;
-
+        let themGioHang = this.props.themGioHang;
+        // let {hamXemChiTiet,sanPham,themGioHang} = this.props;
         return (
             <div className="card">
                 <img src={sanPham.hinhAnh} alt="..." height={350} />
@@ -23,7 +23,9 @@ export default class SanPham extends Component {
                         xemChiTiet(sanPham)
                     }}>Xem chi tiết</button>
 
-                    <button className="btn btn-danger ml-2">Thêm giỏ hàng</button>
+                    <button onClick={()=>{
+                        themGioHang(sanPham)
+                    }} className="btn btn-danger ml-2">Thêm giỏ hàng</button>
                 </div>
             </div>
         )
