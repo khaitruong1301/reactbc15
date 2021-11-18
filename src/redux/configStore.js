@@ -1,9 +1,11 @@
 import {combineReducers, createStore} from 'redux';
+import { gameXucXacReducer } from './reducers/gameXucXacReducer';
 import { gioHangReducer } from './reducers/gioHangReducer';
 
 const rootReducer = combineReducers({
     //Nơi chứa toàn bộ state của ứng dụng (Thay vì đặt dưới this.state của component)
-    stateGioHang : gioHangReducer
+    stateGioHang : gioHangReducer,
+    gameXucXacReducer
     //....stateBaiTap: 
 
 });
