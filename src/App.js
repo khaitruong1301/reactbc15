@@ -17,6 +17,7 @@ import DanhSachPham from './Props/DanhSachSanPham/DanhSachPham';
 import BaiTapGioHangRedux from './DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
 import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
 import BaiTapQuanLyNguoiDung from './ReactForm/BaiTapQuanLyNguoiDung';
+import Lifecycle from './Lifecycle/Lifecycle';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         {/* <BaiTapGioHangRedux /> */}
         {/* <BaiTapGameXucXac /> */}
         <BaiTapQuanLyNguoiDung />
-     
+        {/* <Lifecycle /> */}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { xoaNguoiDungAction } from '../redux/actions/BTQuanLyNguoiDungActions';
+import { XOA_NGUOI_DUNG } from '../redux/actions/types/BTQuanLyNguoiDungTypes';
 
 class TableDanhSachNguoiDung extends Component {
     
@@ -34,7 +36,23 @@ class TableDanhSachNguoiDung extends Component {
                                     <td>{nguoiDung.soDienThoai}</td>
                                     <td>{nguoiDung.maLoaiNguoiDung}</td>
                                     <td>
-                                        <button className="btn btn-danger">Xoá</button>
+                                        <button className="btn btn-danger" onClick={()=> {
+                                            // Cách viết action creator
+                                            const action = xoaNguoiDungAction(nguoiDung.taiKhoan);
+                                            //Gửi dữ liệu lên redux
+                                            this.props.dispatch(action);
+
+                                        }}>Xoá</button>
+
+                                        <button className="btn btn-primary" onClick={()=>{
+                                            const action = {
+                                                type:'CHINH_SUA_NGUOI_DUNG',
+                                                nguoiDung:nguoiDung
+                                            }
+                                            //Gọi hàm dispatch đưa dữ liệu dòng tr được click lên redux
+                                            this.props.dispatch(action);
+                                        }}>Chỉnh sửa</button>
+
                                     </td>
                                 </tr>
                             })}
