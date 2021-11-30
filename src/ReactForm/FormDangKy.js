@@ -165,7 +165,16 @@ class FormDangKy extends Component {
                 <div className="card-footer">
                     <div className="form-group">
                         <button type="submit" className="btn btn-success mr-2">Đăng ký</button>
-                        <button type="button" className="btn btn-primary">Cập nhật</button>
+                        <button type="button" className="btn btn-primary" onClick={()=>{
+                            const action = {
+                                type:'CAP_NHAT_NGUOI_DUNG',
+                                nguoiDung:this.state.values
+                            }
+
+                            //Đưa dữ liệu cập nhật người dùng lên redux
+                            this.props.dispatch(action);
+
+                        }}>Cập nhật</button>
                     </div>
                 </div>
             </form>

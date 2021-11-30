@@ -1,46 +1,33 @@
-
-import Nav from './components/Nav'
-import Card from './components/Card';
-
-import Profile from './components/Profile';
-import BaiTapComponent from './components/BaiTapComponent/BaiTapComponent';
-import BaiTapVeNha from './components/BaiTapVeNha/BaiTapVeNha';
-import Databinding from './databinding/Databinding';
-import HandleEvent from './handleEvent/HandleEvent';
-import StateDemo from './State/StateDemo';
-import Style from './StyleDemo/Style';
-import Example from './State/Example';
-import Example2 from './State/Example2';
-import RenderWithMap from './RenderWithMap/RenderWithMap';
-import DemoProps from './Props/DemoProps/DemoProps';
-import DanhSachPham from './Props/DanhSachSanPham/DanhSachPham';
-import BaiTapGioHangRedux from './DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
-import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
-import BaiTapQuanLyNguoiDung from './ReactForm/BaiTapQuanLyNguoiDung';
-import Lifecycle from './Lifecycle/Lifecycle';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import HeaderHome from './components/HeaderHome/HeaderHome';
+import About from './_pages/About';
+import Contact from './_pages/Contact';
+import HomePage from './_pages/HomePage';
+import DemoUseEffect from './_pages/Hooks/DemoUseEffect';
+import DemoUseState from './_pages/Hooks/DemoUseState';
 
 function App() {
   return (
-    <div>
-        {/* <Nav />
-        <Card />
-        <Profile /> */}
-        {/* <BaiTapComponent /> */}
-        {/* <BaiTapVeNha /> */}
-        {/* <Databinding /> */}
-        {/* <HandleEvent /> */}
-        {/* <StateDemo /> */}
-        {/* <Style /> */}
-        {/* <p className='color-red'>App component</p> */}
-        {/* <Example /> */}
-        {/* <RenderWithMap /> */}
-        {/* <DemoProps /> */}
-        {/* <DanhSachPham /> */}
-        {/* <BaiTapGioHangRedux /> */}
-        {/* <BaiTapGameXucXac /> */}
-        <BaiTapQuanLyNguoiDung />
-        {/* <Lifecycle /> */}
-    </div>
+    <BrowserRouter>
+      <HeaderHome />
+      <Switch>
+        <Route exact path="/about" component={About} />
+        <Route exact path="/home" component={HomePage} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/usestate" component={DemoUseState} />
+        <Route exact path="/useeffect" component={DemoUseEffect} />
+        {/* Trang chủ được load mặc định */}
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+
+      {/* <Route path="/demo" render={(propsRoute) => {
+        return <div>
+          abc
+          <br />
+          <HomePage {...propsRoute} />
+        </div>
+      }} /> */}
+    </BrowserRouter>
   );
 }
 
