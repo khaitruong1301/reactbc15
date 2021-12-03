@@ -24,6 +24,10 @@ export default function HeaderHome(props) {
                         <div className="dropdown-menu " aria-labelledby="dropdownId">
                             <NavLink className="nav-link text-dark" to="/usestate">UseState</NavLink>
                             <NavLink className="nav-link text-dark" to="/useeffect">UseEffect</NavLink>
+                            <NavLink className="nav-link text-dark" to="/usememo">use memo</NavLink>
+                            <NavLink className="nav-link text-dark" to="/useref">use ref</NavLink>
+                            <NavLink className="nav-link text-dark" to="/hookredux">hooks redux</NavLink>
+
                         </div>
                     </li>
                 </ul>

@@ -7,6 +7,7 @@ export default function DemoUseState(props) {
     */
     // let [state,setState] = useState({like: 1})
     let [like,setLike] = useState(1);
+    
     return (
         <div className="container">
             <div className="card w-25 mt-2">
