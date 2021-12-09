@@ -19,6 +19,12 @@ export default function HeaderHome(props) {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contact">Contact</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/login">Login</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/register">Register</NavLink>
+                    </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hooks</a>
                         <div className="dropdown-menu " aria-labelledby="dropdownId">
@@ -27,7 +33,15 @@ export default function HeaderHome(props) {
                             <NavLink className="nav-link text-dark" to="/usememo">use memo</NavLink>
                             <NavLink className="nav-link text-dark" to="/useref">use ref</NavLink>
                             <NavLink className="nav-link text-dark" to="/hookredux">hooks redux</NavLink>
-
+                        </div>
+                    </li>
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Api</a>
+                        <div className="dropdown-menu " aria-labelledby="dropdownId">
+                            <NavLink className="nav-link text-dark" to="/classapi">class api</NavLink>
+                            <NavLink className="nav-link text-dark" to="/functionapi">function api</NavLink>
+                            <NavLink className="nav-link text-dark" to="/middleware">middle ware redux</NavLink>
+                     
                         </div>
                     </li>
                 </ul>
