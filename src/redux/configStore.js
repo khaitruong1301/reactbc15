@@ -6,13 +6,15 @@ import {FaceBookAppReducer} from './reducers/FaceBookAppReducer';
 import { PhimReducer } from './reducers/PhimReducer';
 //add middleware vào redux
 import reduxThunk from 'redux-thunk'
+import { QuanLyNguoiDungReducer } from './reducers/QuanLyNguoiDungReducer';
 const rootReducer = combineReducers({
     //Nơi chứa toàn bộ state của ứng dụng (Thay vì đặt dưới this.state của component)
     stateGioHang : gioHangReducer,
     gameXucXacReducer,
     BTQuanLyNguoiDungReducer,
     FaceBookAppReducer,
-    PhimReducer
+    PhimReducer,
+    QuanLyNguoiDungReducer
     //....stateBaiTap: 
 
 });

@@ -1,8 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 
 export default function HeaderHome(props) {
+
+    const {userLogin} = useSelector(rootReducer => rootReducer.QuanLyNguoiDungReducer)
+
+    const renderButtonLogin = () => {
+        if(userLogin) { //Đã đăng nhập
+            return  <NavLink className="nav-link" to="/">{userLogin.taiKhoan}</NavLink>
+        }
+        //Chưa đăng nhập thì render ra nút đăng nhập
+        return  <NavLink className="nav-link" to="/login">Login</NavLink>
+    }
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -20,7 +31,7 @@ export default function HeaderHome(props) {
                         <NavLink className="nav-link" to="/contact">Contact</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/login">Login</NavLink>
+                       {renderButtonLogin()}
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/register">Register</NavLink>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch ,Router} from 'react-router-dom'
 import HeaderHome from './components/HeaderHome/HeaderHome';
 import About from './_pages/About';
 import Contact from './_pages/Contact';
@@ -14,10 +14,12 @@ import DemoUseState from './_pages/Hooks/DemoUseState';
 import DemoUseRef from './_pages/Hooks/UseRef/DemoUseRef';
 import Login from './_pages/Login';
 import Register from './_pages/Register';
-
+//Cấu hình history
+import { createBrowserHistory} from 'history'
+export const history = createBrowserHistory();
 function App() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <HeaderHome />
       <Switch>
         <Route exact path="/about" component={About} />
@@ -46,7 +48,7 @@ function App() {
           <HomePage {...propsRoute} />
         </div>
       }} /> */}
-    </BrowserRouter>
+    </Router>
   );
 }
 
