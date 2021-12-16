@@ -16,29 +16,36 @@ import Login from './_pages/Login';
 import Register from './_pages/Register';
 //Cấu hình history
 import { createBrowserHistory} from 'history'
+import HOC from './_pages/HOC/HOC';
+import Modal from './_pages/HOC/Modal';
+import { HomeTemplate } from './templates/HomeTemplate';
+import { UserTemplate } from './templates/UserTemplate';
+import HomeMoBile from './_pages/Home/HomeMoBile';
 export const history = createBrowserHistory();
 function App() {
   return (
     <Router history={history}>
-      <HeaderHome />
+      {/* <HeaderHome /> */}
+      <Modal />
       <Switch>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/home" component={HomePage} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/usestate" component={DemoUseState} />
-        <Route exact path="/useeffect" component={DemoUseEffect} />
-        <Route exact path="/usememo" component={DemoUseMemo} />
-        <Route exact path="/useref" component={DemoUseRef} />
-        <Route exact path="/hookredux" component={DemoHookRedux} />
-        <Route exact path="/functionapi" component={FuncApi} />
-        <Route exact path="/classapi" component={ClassApi} />
-        <Route exact path="/middleware" component={MiddleWareRedux} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/detail/:maPhim" component={Detail} />
+        <HomeTemplate exact path="/about" Component={About} />
+        <HomeTemplate exact path="/home" Component={HomePage} MobileComponent={HomeMoBile}/>
+        <HomeTemplate exact path="/hoc" Component={HOC} />
+        <HomeTemplate exact path="/contact" Component={Contact} />
+        <HomeTemplate exact path="/usestate" Component={DemoUseState} />
+        <HomeTemplate exact path="/useeffect" Component={DemoUseEffect} />
+        <HomeTemplate exact path="/usememo" Component={DemoUseMemo} />
+        <HomeTemplate exact path="/useref" Component={DemoUseRef} />
+        <HomeTemplate exact path="/hookredux" Component={DemoHookRedux} />
+        <HomeTemplate exact path="/functionapi" Component={FuncApi} />
+        <HomeTemplate exact path="/classapi" Component={ClassApi} />
+        <HomeTemplate exact path="/middleware" Component={MiddleWareRedux} />
+        <UserTemplate exact path="/login" Component={Login} />
+        <UserTemplate exact path="/register" Component={Register} />
+        <HomeTemplate exact path="/detail/:maPhim" Component={Detail} />
 
         {/* Trang chủ được load mặc định */}
-        <Route exact path="/" component={HomePage} />
+        <HomeTemplate exact path="/" Component={HomePage} MobileComponent={HomeMoBile} />
       </Switch>
 
       {/* <Route path="/demo" render={(propsRoute) => {

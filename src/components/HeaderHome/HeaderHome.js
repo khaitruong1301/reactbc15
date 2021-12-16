@@ -27,6 +27,7 @@ export default function HeaderHome(props) {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/about">About</NavLink>
                     </li>
+                  
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contact">Contact</NavLink>
                     </li>
@@ -35,6 +36,9 @@ export default function HeaderHome(props) {
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/register">Register</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/hoc">HOC</NavLink>
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hooks</a>
