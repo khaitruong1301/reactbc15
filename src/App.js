@@ -21,6 +21,7 @@ import Modal from './_pages/HOC/Modal';
 import { HomeTemplate } from './templates/HomeTemplate';
 import { UserTemplate } from './templates/UserTemplate';
 import HomeMoBile from './_pages/Home/HomeMoBile';
+import DemoAnt from './_pages/DemoAnt/DemoAnt';
 export const history = createBrowserHistory();
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <UserTemplate exact path="/login" Component={Login} />
         <UserTemplate exact path="/register" Component={Register} />
         <HomeTemplate exact path="/detail/:maPhim" Component={Detail} />
+        <HomeTemplate exact path="/demoant" Component={DemoAnt} />
 
         {/* Trang chủ được load mặc định */}
         <HomeTemplate exact path="/" Component={HomePage} MobileComponent={HomeMoBile} />

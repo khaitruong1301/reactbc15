@@ -1,12 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-
 import {Route} from 'react-router-dom'
 import HeaderHome from '../components/HeaderHome/HeaderHome';
-
-
-
 
 
 export const HomeTemplate =  (props) => {

@@ -40,6 +40,9 @@ export default function HeaderHome(props) {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/hoc">HOC</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/demoant">Demo antD</NavLink>
+                    </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hooks</a>
                         <div className="dropdown-menu " aria-labelledby="dropdownId">

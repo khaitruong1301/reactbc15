@@ -1,14 +1,16 @@
 import axios from 'axios'
-import { KEY_TOKEN_CYBERSOFT,TOKEN_CYBERSOFT } from '../../util/setting'
+import { http, KEY_TOKEN_CYBERSOFT,TOKEN_CYBERSOFT } from '../../util/setting'
 
 //closure function
 export const getApiPhimAction = (maNhom = "GP01") => {
     return (dispatch) => {
         //Gọi api .... 
-        let promise = axios({
-            url: `http://movieapi.cyberlearn.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`,
-            method: 'GET'
-        })
+        let promise = http.get(`https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`)
+        
+        // axios({
+        //     url: `https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`,
+        //     method: 'GET'
+        // })
 
         promise.then(result => {
             dispatch({
@@ -26,10 +28,8 @@ export const getApiPhimAction = (maNhom = "GP01") => {
 export const getApiNguoiDungAction = () => {
     return (dispatch) => {
         //Gọi api .... 
-        let promise = axios({
-            url: 'http://movieapi.cyberlearn.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01',
-            method: 'GET'
-        })
+        let promise = http.get('https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01')
+       
 
         promise.then(result => {
             dispatch({
@@ -51,13 +51,8 @@ export const layThongTinPhimLichChieu = (maPhim) => {
     return async (dispatch) => {
 
         try {
-            let result = await axios({
-                url: `https://movienew.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
-                method: 'GET',
-                headers: {
-                    [KEY_TOKEN_CYBERSOFT]:TOKEN_CYBERSOFT
-                }
-            })
+            let result = await http.get(`https://movienew.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`);
+            
 
             console.log('result', result);
             //SAu khi lây được dữ liệu về thì cập nhật dữ liệu vào redux
